@@ -14,3 +14,28 @@ show databases;
 | payroll_service    |
 | performance_schema |
 +--------------------+
+
+UC2:  create a employee payroll table in the payroll service database
+
+
+mysql> use payroll_service;
+Database changed
+mysql>  create table employee_payroll(
+    -> id int unsigned Not null AUTO_INCREMENT,
+    -> name VARCHAR(30) NOT NULL,
+    -> salary Double NOT NULL,
+    -> start DATE NOT NULL,
+    -> PRIMARY KEY (id) );
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> describe employee_payroll;
++--------+--------------+------+-----+---------+----------------+
+| Field  | Type         | Null | Key | Default | Extra          |
++--------+--------------+------+-----+---------+----------------+
+| id     | int unsigned | NO   | PRI | NULL    | auto_increment |
+| name   | varchar(30)  | NO   |     | NULL    |                |
+| salary | double       | NO   |     | NULL    |                |
+| start  | date         | NO   |     | NULL    |                |
++--------+--------------+------+-----+---------+----------------+
+4 rows in set (0.01 sec)
+
