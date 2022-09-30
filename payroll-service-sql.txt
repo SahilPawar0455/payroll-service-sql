@@ -83,3 +83,22 @@ mysql>  SELECT SALARY FROM EMPLOYEE_PAYROLL WHERE NAME = 'SAHIL';
 1 row in set (0.00 sec)
 
 
+UC6:  Ability to add gender to employee table
+
+mysql>  Alter Table EMPLOYEE_PAYROLL add gender char(1) after name;
+
+
+mysql> describe EMPLOYEE_PAYROLL;
++--------+--------------+------+-----+---------+----------------+
+| Field  | Type         | Null | Key | Default | Extra          |
++--------+--------------+------+-----+---------+----------------+
+| id     | int unsigned | NO   | PRI | NULL    | auto_increment |
+| name   | varchar(30)  | NO   |     | NULL    |                |
+| gender | char(1)      | YES  |     | NULL    |                |
+| salary | double       | NO   |     | NULL    |                |
+| start  | date         | NO   |     | NULL    |                |
++--------+--------------+------+-----+---------+----------------+
+5 rows in set (0.01 sec)
+
+
+
