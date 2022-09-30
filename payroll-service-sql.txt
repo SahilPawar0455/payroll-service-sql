@@ -70,3 +70,16 @@ mysql> select * from  employee_payroll;
 +----+---------+--------+------------+
 3 rows in set (0.00 sec)
 
+
+UC5:  ability to retrieve the salary for particular employee
+
+
+mysql>  SELECT SALARY FROM EMPLOYEE_PAYROLL WHERE NAME = 'SAHIL';
++--------+
+| SALARY |
++--------+
+|  25000 |
++--------+
+1 row in set (0.00 sec)
+
+
